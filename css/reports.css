@@ -1,0 +1,511 @@
+/* Reports Page Specific Styles */
+.page-header {
+    margin-bottom: 2.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 2.5rem;
+    border-radius: 20px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+    text-align: center;
+}
+
+.page-header h1 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-weight: 800;
+    font-size: 2.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-header p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.page-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2.5rem;
+}
+
+.form-section {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    height: fit-content;
+    position: sticky;
+    top: 2rem;
+}
+
+.form-section h2 {
+    color: var(--dark);
+    margin-bottom: 2rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--gray-light);
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.form-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary) 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--dark);
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid #e1e8ed;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.1);
+    background: white;
+}
+
+.form-group input:hover,
+.form-group select:hover {
+    border-color: #b8c5f3;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.checkbox-group label {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: var(--gray-dark);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.checkbox-group label:hover {
+    color: var(--secondary);
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-right: 0.75rem;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--secondary);
+    cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"]:checked + span {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.checkbox-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border: 2px solid transparent;
+}
+
+.checkbox-columns:hover {
+    border-color: var(--secondary);
+}
+
+.checkbox-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border: 2px solid transparent;
+}
+
+.checkbox-list:hover {
+    border-color: var(--secondary);
+}
+
+.checkbox-group small {
+    color: var(--gray);
+    font-size: 0.85rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+button[name="generate_report"] {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--success) 0%, #229954 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+button[name="generate_report"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(39, 174, 96, 0.4);
+}
+
+/* Reports List */
+.reports-list {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+}
+
+.reports-list h2 {
+    color: var(--dark);
+    margin-bottom: 2rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+    border-bottom: 3px solid var(--gray-light);
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.reports-list h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary) 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+.reports-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.report-card {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 18px;
+    padding: 1.5rem;
+    border: 2px solid transparent;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+.report-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary) 0%, #764ba2 100%);
+}
+
+.report-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: var(--secondary);
+}
+
+.report-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.report-header h3 {
+    color: var(--dark);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.report-type {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.report-type.compliance {
+    background: linear-gradient(135deg, var(--success) 0%, #229954 100%);
+    color: white;
+}
+
+.report-type.health {
+    background: linear-gradient(135deg, var(--warning) 0%, #d68910 100%);
+    color: white;
+}
+
+.report-type.technical {
+    background: linear-gradient(135deg, var(--secondary) 0%, #2980b9 100%);
+    color: white;
+}
+
+.report-type.custom {
+    background: linear-gradient(135deg, var(--gray) 0%, #6c757d 100%);
+    color: white;
+}
+
+.report-info {
+    margin-bottom: 1.5rem;
+}
+
+.report-info p {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    color: var(--gray-dark);
+    font-size: 0.95rem;
+}
+
+.report-info p:last-child {
+    margin-bottom: 0;
+}
+
+.report-info i {
+    margin-right: 0.75rem;
+    color: var(--secondary);
+    width: 16px;
+    text-align: center;
+}
+
+.report-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.report-actions a {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    background: linear-gradient(135deg, var(--secondary) 0%, #2980b9 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.report-actions a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.3);
+}
+
+.report-actions a i {
+    font-size: 0.9rem;
+}
+
+/* Success Alert */
+.alert-success {
+    background: linear-gradient(135deg, var(--success) 0%, #229954 100%);
+    color: white;
+    padding: 1.25rem;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    border: none;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.alert-success a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.alert-success a:hover {
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .page-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .form-section {
+        position: static;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        padding: 2rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .page-content {
+        gap: 1.5rem;
+    }
+    
+    .form-section,
+    .reports-list {
+        padding: 1.5rem;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .reports-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .report-card {
+        padding: 1.25rem;
+    }
+    
+    .report-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+    
+    .report-actions {
+        flex-direction: column;
+    }
+    
+    .checkbox-columns,
+    .checkbox-list {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+    
+    /* Mobile button group improvements */
+    .btn-group {
+        flex-direction: column;
+    }
+    
+    .btn-group .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Button Group Styling */
+.btn-group {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-group .btn {
+    flex: 1;
+    min-width: 80px;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.85rem;
+}
+
+.btn-group .btn i {
+    margin-right: 0.25rem;
+}
+
+/* Success button styling */
+.btn-success {
+    background: var(--gradient-success);
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.3);
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(39, 174, 96, 0.4);
+}
+
+/* Inline form styling */
+.inline-form {
+    display: inline;
+}

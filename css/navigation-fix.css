@@ -1,0 +1,82 @@
+/* Navigation Fix CSS - Override problematic styles */
+
+/* Reset navigation to stable, clickable state */
+.navbar {
+    z-index: 1000 !important;
+}
+
+.nav-menu {
+    display: flex !important;
+    list-style: none !important;
+    gap: 0.5rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    z-index: 1001 !important;
+}
+
+.nav-menu li {
+    margin-left: 0 !important;
+    position: relative !important;
+    z-index: 1001 !important;
+}
+
+.nav-menu a {
+    color: white !important;
+    text-decoration: none !important;
+    padding: 0.75rem 1.25rem !important;
+    border-radius: 12px !important;
+    transition: all 0.2s ease !important;
+    font-weight: 600 !important;
+    position: relative !important;
+    display: block !important;
+    cursor: pointer !important;
+    user-select: none !important;
+    z-index: 1002 !important;
+    pointer-events: auto !important;
+    
+    /* Remove problematic properties */
+    overflow: visible !important;
+    will-change: auto !important;
+    backface-visibility: visible !important;
+    transform-style: flat !important;
+}
+
+/* Remove all ::before and ::after pseudo-elements */
+.nav-menu a::before,
+.nav-menu a::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Simple, stable hover effects */
+.nav-menu a:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+.nav-menu a.active {
+    background: rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Focus and active states */
+.nav-menu a:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.5) !important;
+    outline-offset: 2px !important;
+}
+
+.nav-menu a:active {
+    transform: translateY(0) !important;
+    transition: transform 0.1s ease !important;
+}
+
+/* Ensure no child elements interfere */
+.nav-menu a * {
+    pointer-events: none !important;
+}
+
+/* Force pointer events */
+.nav-menu a, .nav-menu li {
+    pointer-events: auto !important;
+}
